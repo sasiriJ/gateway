@@ -81,6 +81,16 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <image>
+                        <builder>paketobuildpacks/builder:latest</builder>
+                        <buildCache>
+                            <volume>
+                                <name>build-cache</name>
+                            </volume>
+                        </buildCache>
+                    </image>
+                </configuration>
             </plugin>
         </plugins>
     </build>
